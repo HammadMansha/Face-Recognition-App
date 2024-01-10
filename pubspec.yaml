@@ -56,6 +56,9 @@ dev_dependencies:
   shared_preferences: ^2.2.2
   gallery_saver: ^2.3.2
   image_gallery_saver:
+  process_run: ^0.14.0+1
+  sqflite: ^2.0.0
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

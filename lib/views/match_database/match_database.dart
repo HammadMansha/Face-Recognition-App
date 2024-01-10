@@ -1,3 +1,4 @@
+import 'package:ai_test_app/controllers/match_database/match_database.dart';
 import 'package:ai_test_app/utils/libraries/app_libraries.dart';
 
 import '../../controllers/upload_gallery_images/upload_gallery_controller.dart';
@@ -35,6 +36,8 @@ class MatchDatabaseScreen extends StatelessWidget {
   bodyData() {
     UploadGalleryController uploadGalleryController =
         Get.put(UploadGalleryController());
+
+    MatchDataBaseController matchDataBaseController=Get.put(MatchDataBaseController());
 
     return Obx(() {
       return SafeArea(
@@ -105,7 +108,11 @@ class MatchDatabaseScreen extends StatelessWidget {
                                       borderColor: AppColors.colorF2A9,
                                       textStyle:
                                           CommonTextStyle.font18weight7White,
-                                      onPressed: () async {},
+                                      onPressed: () async {
+                                        // final result = await matchDataBaseController.runPythonScript();
+                                        // print("python file result is----------$result");
+
+                                      },
                                     ).marginOnly(top: 40),
                                   ],
                                 );

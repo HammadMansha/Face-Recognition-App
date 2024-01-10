@@ -12,7 +12,7 @@ import '../utils/libraries/app_libraries.dart';
 import '../views/auth/login/login_screen.dart';
 
 class AppPages {
-  static var initial = Routes.splashScreen;
+  static var initial = Routes.matchDatabaseScreen;
   static final routes = [
 
     //----------------------Splash screen route------------------
