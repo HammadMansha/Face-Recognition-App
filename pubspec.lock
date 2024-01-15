@@ -93,10 +93,10 @@ packages:
     dependency: transitive
     description:
       name: collection
-      sha256: f092b211a4319e98e5ff58223576de6c2803db36221657b46c82574721240687
+      sha256: ee67cb0715911d28db6bf4af1026078bd6f0128b07a5f66fb2ed94ec6783c09a
       url: "https://pub.dev"
     source: hosted
-    version: "1.17.2"
+    version: "1.18.0"
   convert:
     dependency: transitive
     description:
@@ -141,10 +141,10 @@ packages:
     dependency: transitive
     description:
       name: ffi
-      sha256: "7bf0adc28a23d395f19f3f1eb21dd7cfd1dd9f8e1c50051c069122e6853bc878"
+      sha256: "13a6ccf6a459a125b3fcdb6ec73bd5ff90822e071207c663bfd1f70062d51d18"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+    version: "1.2.1"
   file:
     dependency: transitive
     description:
@@ -372,10 +372,10 @@ packages:
     dependency: transitive
     description:
       name: meta
-      sha256: "3c74dbf8763d36539f114c799d8a2d87343b5067e9d796ca22b5eb8437090ee3"
+      sha256: a6e590c838b18133bb482a2745ad77c5bb7715fb0451209e1a7567d416678b8e
       url: "https://pub.dev"
     source: hosted
-    version: "1.9.1"
+    version: "1.10.0"
   mime:
     dependency: transitive
     description:
@@ -384,22 +384,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
-  package_info_plus:
-    dependency: transitive
-    description:
-      name: package_info_plus
-      sha256: "7e76fad405b3e4016cd39d08f455a4eb5199723cf594cd1b8916d47140d93017"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.2.0"
-  package_info_plus_platform_interface:
-    dependency: transitive
-    description:
-      name: package_info_plus_platform_interface
-      sha256: "9bc8ba46813a4cc42c66ab781470711781940780fd8beddd0c3da62506d3a6c6"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.0.1"
   path:
     dependency: "direct dev"
     description:
@@ -412,10 +396,10 @@ packages:
     dependency: "direct dev"
     description:
       name: path_provider
-      sha256: a1aa8aaa2542a6bc57e381f132af822420216c80d4781f7aa085ca3229208aaa
+      sha256: "3087813781ab814e4157b172f1a11c46be20179fcc9bea043e0fba36bc0acaa2"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.1"
+    version: "2.0.15"
   path_provider_android:
     dependency: transitive
     description:
@@ -452,10 +436,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_windows
-      sha256: "8bc9f22eee8690981c22aa7fc602f5c85b497a6fb2ceb35ee5a5e5ed85ad8170"
+      sha256: a34ecd7fb548f8e57321fd8e50d865d266941b54e6c3b7758cf8f37c24116905
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.1"
+    version: "2.0.7"
   permission_handler:
     dependency: "direct dev"
     description:
@@ -548,50 +532,10 @@ packages:
     dependency: "direct dev"
     description:
       name: serious_python
-      sha256: d16746f56c52efc6d3f27f77df1e45f798022ce26a16152c58c952fa71602fa1
+      sha256: ff587e3b6b1e86672595c27517354b57db437c1ab47024dc7702e5fc7d26b5ec
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.1"
-  serious_python_android:
-    dependency: transitive
-    description:
-      name: serious_python_android
-      sha256: "5795c01644f5805e924234ad68d9c13d57b69cfa1f47ad01299f0581971ad6dc"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.1"
-  serious_python_darwin:
-    dependency: transitive
-    description:
-      name: serious_python_darwin
-      sha256: c2e9f7c14674f07370d5cc388e2f08aa425ef02fd60713a3ac75d1c5fe0239bf
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.1"
-  serious_python_linux:
-    dependency: transitive
-    description:
-      name: serious_python_linux
-      sha256: "8f5eb5207cb8579d789b7a313711fb441dfd03157688574bdddc9d83f5476bc2"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.1"
-  serious_python_platform_interface:
-    dependency: transitive
-    description:
-      name: serious_python_platform_interface
-      sha256: a36364a43a02867675777bf14dc4ca261775e490649e9718968d77b652edf17c
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.1"
-  serious_python_windows:
-    dependency: transitive
-    description:
-      name: serious_python_windows
-      sha256: "7d901efb10f0db0ea3eb7aa68db646e633298d8517497fd17b8107331994452b"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.1"
+    version: "0.1.5"
   shared_preferences:
     dependency: "direct dev"
     description:
@@ -681,18 +625,18 @@ packages:
     dependency: transitive
     description:
       name: stack_trace
-      sha256: c3c7d8edb15bee7f0f74debd4b9c5f3c2ea86766fe4178eb2a18eb30a0bdaed5
+      sha256: "73713990125a6d93122541237550ee3352a2d84baad52d375a4cad2eb9b7ce0b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.11.0"
+    version: "1.11.1"
   stream_channel:
     dependency: transitive
     description:
       name: stream_channel
-      sha256: "83615bee9045c1d322bbbd1ba209b7a749c2cbcdcb3fdd1df8eb488b3279c1c8"
+      sha256: ba2aa5d8cc609d96bbb2899c28934f9e1af5cddbd60a827822ea467161eb54e7
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.2"
   stream_transform:
     dependency: transitive
     description:
@@ -729,10 +673,10 @@ packages:
     dependency: transitive
     description:
       name: test_api
-      sha256: "75760ffd7786fffdfb9597c35c5b27eaeec82be8edfb6d71d32651128ed7aab8"
+      sha256: "5c2f730018264d276c20e4f1503fd1308dfbbae39ec8ee63c5236311ac06954b"
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.0"
+    version: "0.6.1"
   toml:
     dependency: transitive
     description:
@@ -761,18 +705,18 @@ packages:
     dependency: transitive
     description:
       name: web
-      sha256: dc8ccd225a2005c1be616fe02951e2e342092edf968cf0844220383757ef8f10
+      sha256: afe077240a270dcfd2aafe77602b4113645af95d0ad31128cc02bce5ac5d5152
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.4-beta"
+    version: "0.3.0"
   win32:
     dependency: transitive
     description:
       name: win32
-      sha256: b0f37db61ba2f2e9b7a78a1caece0052564d1bc70668156cf3a29d676fe4e574
+      sha256: c0e3a4f7be7dae51d8f152230b86627e3397c1ba8c3fa58e63d44a9f3edc9cef
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.1"
+    version: "2.6.1"
   xdg_directories:
     dependency: transitive
     description:
@@ -790,5 +734,5 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.1.3 <4.0.0"
+  dart: ">=3.2.0-194.0.dev <4.0.0"
   flutter: ">=3.13.0"

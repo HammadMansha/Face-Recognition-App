@@ -1,23 +1,35 @@
-import 'dart:io';
-
-import 'package:ai_test_app/utils/libraries/app_libraries.dart';
-import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
-import 'package:process_run/process_run.dart';
+import 'package:ai_test_app/utils/libraries/app_libraries.dart';
+import 'package:flutter/services.dart';
+import 'dart:async';
 import 'package:serious_python/serious_python.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter/services.dart';
 
 class MatchDataBaseController extends GetxController {
+  final MethodChannel channel = const MethodChannel('runScript');
+
   @override
   void onInit() async {
-    await requestStoragePermission();
-    await runPythonScript();
+    // await requestStoragePermission();
+    // await runPythonScript();
+    await callKotlinFunction();
 
     // await runPythonScript();
     // TODO: implement onInit
+
+    //await invokeNativeMethod();
     super.onInit();
+  }
+
+  Future<void> callKotlinFunction() async {
+    try {
+      final String result = await channel.invokeMethod('your_native_method');
+      print('Result from Kotlin: $result');
+    } on PlatformException catch (e) {
+      print('Error: ${e.message}');
+    }
   }
 
   Future<void> requestStoragePermission() async {
@@ -30,32 +42,26 @@ class MatchDataBaseController extends GetxController {
     }
   }
 
+  Future<void> runPythonScript() async {
+    try {
+      ByteData scriptData = await rootBundle.load('assets/app/main.zip');
+      Uint8List scriptContent = scriptData.buffer.asUint8List();
 
-Future<void> runPythonScript() async {
-  try {
-    // Replace '/path/to/python' and 'sample.py' with the actual path to your Python executable and script
+      // Convert binary data to base64-encoded string
+      String base64String = base64Encode(scriptContent);
 
-final pythonExecutable = 'C:${Platform.pathSeparator}users${Platform.pathSeparator}hp${Platform.pathSeparator}appdata${Platform.pathSeparator}local${Platform.pathSeparator}programs${Platform.pathSeparator}python${Platform.pathSeparator}python39${Platform.pathSeparator}python.exe';
-final pythonScript = 'C:${Platform.pathSeparator}Users${Platform.pathSeparator}HP${Platform.pathSeparator}Documents${Platform.pathSeparator}practise${Platform.pathSeparator}Face-Recognition-App${Platform.pathSeparator}sample.py';
+      // Pass the base64-encoded string to the run method
+      var temp = await SeriousPython.run(base64String, appFileName: "main.py");
 
-
-
-
-
-if (await File(pythonExecutable).exists() && await File(pythonScript).exists()) {
-  final process = await Process.run(pythonExecutable, [pythonScript]);
-  // Rest of your code...
-} else {
-  print('Python executable or script not found.');
-}
-
-    // Print the output and exit code
-    // print('Exit code: ${process.exitCode}');
-    // print('Output: ${process.stdout}');
-    // print('Error: ${process.stderr}');
-  } catch (e) {
-    print('Error executing Python script: $e');
+      print("temp-----------------------${temp}");
+    } catch (error) {
+      print('Error running Python script: $error');
+    }
   }
-}
 
+// Future<int> addNumbers(int a, int b) async {
+//   final python = ChaquopyPython();
+//   final result = await python.execute('add_numbers', [a, b]);
+//   return result as int;
+// }
 }
