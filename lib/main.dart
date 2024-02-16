@@ -2,6 +2,7 @@ import 'package:ai_test_app/routes/app_pagess.dart';
 import 'package:ai_test_app/services/auth_service/auth_services.dart';
 import 'package:ai_test_app/utils/libraries/app_libraries.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 
@@ -16,7 +17,12 @@ Future<void> main() async {
 
 // Get a specific camera from the list of available cameras.
   final firstCamera = cameras.first;
+  await initSharedPreferences(); // You can create a function to initialize SharedPreferences
   runApp(const MyApp());
+}
+
+Future<void> initSharedPreferences() async {
+  await SharedPreferences.getInstance();
 }
 
 Future<void> initServices() async {
@@ -49,4 +55,5 @@ class MyApp extends StatelessWidget {
     );
 
   }
+
 }

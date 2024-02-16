@@ -240,6 +240,14 @@ class CommonTextStyle {
       fontWeight: FontWeight.w500);
 
 
+  static TextStyle font10weight300F8FAPublic =  const TextStyle(
+      color: Colors.black,
+      letterSpacing: 0.4,
+      fontSize: 10,
+      fontFamily: 'Roboto',
+      fontWeight: FontWeight.w300);
+
+
 
   static TextStyle font27weight500F8FAOutfit =  const TextStyle(
       color: AppColors.whiteTextColor,

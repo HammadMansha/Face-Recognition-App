@@ -34,7 +34,7 @@ packages:
     source: hosted
     version: "2.1.1"
   camera:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: camera
       sha256: f3813a634fd1350a9d2a78ee70e5b247cebedc9c58a24560992620e57a8a5600
@@ -190,6 +190,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_launcher_icons:
+    dependency: "direct dev"
+    description:
+      name: flutter_launcher_icons
+      sha256: "559c600f056e7c704bd843723c21e01b5fba47e8824bd02422165bcc02a5de1d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.3"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -217,7 +225,7 @@ packages:
     source: sdk
     version: "0.0.0"
   gallery_saver:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: gallery_saver
       sha256: df8b7e207ca12d64c71e0710a7ee3bc48aa7206d51cc720716fedb1543a66712
@@ -225,7 +233,7 @@ packages:
     source: hosted
     version: "2.3.2"
   get:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: get
       sha256: e4e7335ede17452b391ed3b2ede016545706c01a02292a6c97619705e7d2a85e
@@ -233,7 +241,7 @@ packages:
     source: hosted
     version: "4.6.6"
   get_storage:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: get_storage
       sha256: "39db1fffe779d0c22b3a744376e86febe4ade43bf65e06eab5af707dc84185a2"
@@ -256,8 +264,16 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  image:
+    dependency: transitive
+    description:
+      name: image
+      sha256: "8e9d133755c3e84c73288363e6343157c383a0c6c56fc51afcc5d4d7180306d6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.3.0"
   image_gallery_saver:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: image_gallery_saver
       sha256: "0aba74216a4d9b0561510cb968015d56b701ba1bd94aace26aacdd8ae5761816"
@@ -265,7 +281,7 @@ packages:
     source: hosted
     version: "2.0.3"
   image_picker:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: image_picker
       sha256: "340efe08645537d6b088a30620ee5752298b1630f23a829181172610b868262b"
@@ -344,8 +360,16 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  loading_animation_widget:
+    dependency: "direct main"
+    description:
+      name: loading_animation_widget
+      sha256: "1901682600273a966c34cf44a85fc5355da92a8d08a8a43c11adc4e471993e3a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0+4"
   localization:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: localization
       sha256: "9fa21644b75ca3fe844f8f115d03cd6fdc675054dd9aab6c5de5861145ea57b5"
@@ -385,7 +409,7 @@ packages:
     source: hosted
     version: "1.0.4"
   path:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: path
       sha256: "8829d8a55c13fc0e37127c29fedf290c102f4e40ae94ada574091fe0ff96c917"
@@ -393,7 +417,7 @@ packages:
     source: hosted
     version: "1.8.3"
   path_provider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: path_provider
       sha256: "3087813781ab814e4157b172f1a11c46be20179fcc9bea043e0fba36bc0acaa2"
@@ -441,7 +465,7 @@ packages:
     source: hosted
     version: "2.0.7"
   permission_handler:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: permission_handler
       sha256: "284a66179cabdf942f838543e10413246f06424d960c92ba95c84439154fcac8"
@@ -513,7 +537,7 @@ packages:
     source: hosted
     version: "3.7.3"
   process_run:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: process_run
       sha256: "66847793266478f2fd1222f9d165069643f5b99da642154c6c22fb8d38130a78"
@@ -529,7 +553,7 @@ packages:
     source: hosted
     version: "2.1.4"
   serious_python:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: serious_python
       sha256: ff587e3b6b1e86672595c27517354b57db437c1ab47024dc7702e5fc7d26b5ec
@@ -537,7 +561,7 @@ packages:
     source: hosted
     version: "0.1.5"
   shared_preferences:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: shared_preferences
       sha256: "81429e4481e1ccfb51ede496e916348668fd0921627779233bd24cc3ff6abd02"
@@ -606,7 +630,7 @@ packages:
     source: hosted
     version: "1.10.0"
   sqflite:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: sqflite
       sha256: "591f1602816e9c31377d5f008c2d9ef7b8aca8941c3f89cc5fd9d84da0c38a9a"
@@ -725,6 +749,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: "5bc72e1e45e941d825fd7468b9b4cc3b9327942649aeb6fc5cdbf135f0a86e84"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.3.0"
   yaml:
     dependency: transitive
     description:

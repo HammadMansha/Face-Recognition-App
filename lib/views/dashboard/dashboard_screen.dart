@@ -23,82 +23,91 @@ class DashboardScreen extends StatelessWidget {
       height: Get.height,
       width: Get.width,
       color: Colors.black,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            height: Get.height / 4,
-          ),
-          //----------------------Container section----------------------
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: Get.height / 6,
+            ),
 
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed(Routes.uploadGallery);
-                    },
-                    child: Container(
-                      height: 170,
-                      width: Get.width / 2.5,
-                      decoration: BoxDecoration(
-                        color: AppColors.colorF2A9,
-                        borderRadius: BorderRadius.circular(25),
+            Container(
+              height: 100,
+              width: Get.width/1.8,
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/synlogo.png"),
+                      fit: BoxFit.contain
+                  )
+              ),
+            ),
+
+            //----------------------Container section----------------------
+
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Routes.uploadGallery);
+                      },
+                      child: Container(
+                        height: 170,
+                        width: Get.width / 2.5,
+                        decoration: BoxDecoration(
+                          color: AppColors.colorF2A9,
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset("assets/images/upload.png"),
+                            Text("Add New Entry",style: CommonTextStyle.font14weight400BlackPublic,),
+
+                          ],
+                        ),
                       ),
-                      child: Image.asset("assets/images/upload.png"),
                     ),
-                  ),
-                  SizedBox(
-                    width: Get.width / 2.5,
-                    child: Text(
-                      "Share captured moments from your gallery.",
-                      style: CommonTextStyle.font14weight300White60,
-                      softWrap: true,
-                      textAlign: TextAlign.center,
-                    ).marginOnly(top: 20),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                width: 30,
-              ),
-              Column(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed(Routes.matchDatabaseScreen);
-                    },
-                    child: Container(
-                      height: 170,
-                      width: Get.width / 2.5,
-                      decoration: BoxDecoration(
-                        color: AppColors.colorF2A9,
-                        borderRadius: BorderRadius.circular(25),
+                  ],
+                ),
+                const SizedBox(
+                  width: 30,
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Routes.liveStreamScreen);
+                      },
+                      child: Container(
+                        height: 170,
+                        width: Get.width / 2.5,
+                        decoration: BoxDecoration(
+                          color: AppColors.colorF2A9,
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset("assets/images/live_stream.png"),
+                            Text("Facial Recognition",style: CommonTextStyle.font14weight400BlackPublic,),
+                          ],
+                        ),
                       ),
-                      child: Image.asset("assets/images/live_stream.png"),
                     ),
-                  ),
-                  SizedBox(
-                    width: Get.width / 2.5,
-                    child: Text(
-                      "Broadcast and share real-time moments with the world.",
-                      style: CommonTextStyle.font14weight300White60,
-                      softWrap: true,
-                      textAlign: TextAlign.center,
-                    ),
-                  ).marginOnly(top: 20),
-                ],
-              ),
-            ],
-          ),
+                  ],
+                ),
+              ],
+            ).marginOnly(top: 40),
 
 
 
-        ],
+          ],
+        ),
       ),
     );
   }

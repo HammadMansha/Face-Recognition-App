@@ -31,23 +31,22 @@ class LoginScreen extends StatelessWidget {
           child: Form(
             key: loginScreenController.formKey,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                  SizedBox(
-                  height: Get.height/7,
+                  height: Get.height/6,
                 ),
                Container(
-                 height: 200,
-                 width: 200,
+                 height: 100,
+                 width: Get.width/1.8,
                  decoration: const BoxDecoration(
                    image: DecorationImage(
-                     image: AssetImage("assets/images/face.png"),
+                     image: AssetImage("assets/images/synlogo.png"),
+                     fit: BoxFit.contain
                    )
                  ),
                ),
-                Text(
-                  "Welcome!",
-                  style: CommonTextStyle.font27weight500F8FAOutfit,
-                ),
                 Row(
                   children: [
                     const Icon(
@@ -59,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                       style: CommonTextStyle.font18weight7White,
                     ),
                   ],
-                ).marginOnly(top: 60, bottom: 20),
+                ).marginOnly( bottom: 20,top: 50),
                 CommonTextField(
                   bordercolor: AppColors.colorC9C9,
                   prefixIcon: Icons.person_2_outlined,
@@ -69,14 +68,14 @@ class LoginScreen extends StatelessWidget {
 
                   controller: loginScreenController.username,
                   //hintText: 'Email',
-                  labelText: "Enter Email ID",
+                  labelText: "Username",
 
                   textInputAction: TextInputAction.next,
                   validator: (value) {
                     if (value.toString().isEmpty) {
                       return 'This filed is required';
                     } else if (loginScreenController.isEmptyField(value.toString())) {
-                      return 'Please enter a valid email';
+                      return 'Please enter a valid username';
                     }
                     return null;
                   },
@@ -123,10 +122,10 @@ class LoginScreen extends StatelessWidget {
                     onChanged: (value) {
                       value = value.replaceAll(' ', '');
                     },
-                  ).marginSymmetric(vertical: 20),
+                  ).marginSymmetric(vertical: 10),
                 ),
                 CommonButton(
-                        height: 48,
+                        height: 40,
                         width: Get.width,
                         text: "Login",
                         textStyle: CommonTextStyle.font16weight700F8FAPublic,
@@ -135,7 +134,7 @@ class LoginScreen extends StatelessWidget {
                            await loginScreenController.authenticate(loginScreenController.username.text, loginScreenController.password.text);
                           }
                         },
-                        fillColor: AppColors.colorF2A9).marginOnly(top: 40),
+                        fillColor: AppColors.colorF2A9).marginOnly(bottom: 40),
               ],
             ).marginSymmetric(horizontal: 30),
           ),

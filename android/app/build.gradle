@@ -50,6 +50,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
 
         ndk {
             // On Apple silicon, you can omit x86_64.
@@ -79,12 +80,12 @@ android {
             buildPython("C:/Users/HP/AppData/Local/Programs/Python/Python39/python.exe")
             pip {
                 // A requirement specifier, with or without a version number:
-                install("scipy")
+
+                install("-r", "C:/Users/HP/Documents/practise/Face-Recognition-App/android/app/src/main/python/requirements.txt")
 
             }
 
         }
-
         sourceSets {
             getByName("main") {
                 srcDir("src/main/python")

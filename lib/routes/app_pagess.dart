@@ -10,9 +10,12 @@ import 'package:ai_test_app/views/splash/splash_screen.dart';
 
 import '../utils/libraries/app_libraries.dart';
 import '../views/auth/login/login_screen.dart';
+import '../views/live_stream/live_stream_view.dart';
+import 'package:get_storage/get_storage.dart';
+
 
 class AppPages {
-  static var initial = Routes.dashboardScreen;
+  static var initial =  Routes.splashScreen;
   static final routes = [
 
     //----------------------Splash screen route------------------
@@ -61,11 +64,18 @@ class AppPages {
     ),
 
 
-    //----------------------Match databse screen route------------------
+    //----------------------Match database screen route------------------
 
     GetPage(
       name: Routes.matchDatabaseScreen,
       page: () => const MatchDatabaseScreen(),
+    ),
+
+    //----------------------Live Stream screen route------------------
+
+    GetPage(
+      name: Routes.liveStreamScreen,
+      page: () => const LiveStreamView(),
     ),
 
   ];

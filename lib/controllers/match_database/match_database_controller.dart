@@ -14,6 +14,7 @@ class MatchDataBaseController extends GetxController {
   void onInit() async {
     // await requestStoragePermission();
     // await runPythonScript();
+    await checkFileSystemPermission();
     await callKotlinFunction();
 
     // await runPythonScript();
@@ -23,9 +24,34 @@ class MatchDataBaseController extends GetxController {
     super.onInit();
   }
 
+
+  Future<void> checkFileSystemPermission() async {
+    // Check if the app has permission to read external storage
+    PermissionStatus status = await Permission.storage.status;
+
+    if (status.isGranted) {
+      // Permission has been granted, you can proceed with file system operations
+      print("Storage permission is granted");
+    } else {
+      // Permission has not been granted, request it
+      status = await Permission.storage.request();
+
+      if (status.isGranted) {
+        // Permission granted after request
+        print("Storage permission granted after request");
+
+      } else {
+        // Permission denied, handle accordingly
+        print("Storage permission denied");
+      }
+    }
+  }
+
+
+
   Future<void> callKotlinFunction() async {
     try {
-      final String result = await channel.invokeMethod('your_native_method');
+      final String result = await channel.invokeMethod('your_native_method',);
       print('Result from Kotlin: $result');
     } on PlatformException catch (e) {
       print('Error: ${e.message}');

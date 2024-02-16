@@ -6,5 +6,6 @@ class Routes {
   static const recordScreen = '/recordScreen';
   static const openCameraScreen = '/openCameraScreen';
   static const matchDatabaseScreen = '/matchDatabaseScreen';
+  static const liveStreamScreen = '/liveStreamScreen';
 
 }

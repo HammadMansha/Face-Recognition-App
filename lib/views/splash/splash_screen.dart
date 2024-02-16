@@ -1,10 +1,9 @@
 import 'package:ai_test_app/utils/libraries/app_libraries.dart';
 import 'package:ai_test_app/widgets/common_buttons/common_button.dart';
 import 'package:ai_test_app/widgets/common_textstyle/common_text_style.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../routes/app_routes.dart';
-
-
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -17,34 +16,38 @@ class SplashScreen extends StatelessWidget {
   }
 
   bodyData() {
+    Future.delayed(const Duration(seconds: 2), () {
+     Get.toNamed(Routes.loginScreen);
+    });
+
     return SafeArea(
       child: Container(
         height: Get.height,
         width: Get.width,
-        decoration:const BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage("assets/images/splash_screen.png",),
-
+            fit: BoxFit.scaleDown,
+            image: AssetImage(
+              "assets/images/splash_screen.png",
+            ),
           ),
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CommonButton(
-                fillColor: AppColors.colorF2A9,
-                onPressed: (){
-                  Get.toNamed(Routes.loginScreen);
-                },
-              text: "Lets Start",
-              width: Get.width/1.2,
-              height: 48,
-              textStyle: CommonTextStyle.font16weight400Black50,
-            ).marginOnly(bottom: 100),
+
+            Center(
+                child: LoadingAnimationWidget.inkDrop(
+
+
+                color: Colors.white,
+                size: 30,
+                ),
+
+                  ),
           ],
         ),
       ),
     );
-
   }
 }

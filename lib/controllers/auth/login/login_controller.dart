@@ -5,6 +5,7 @@ import 'package:ai_test_app/views/dashboard/dashboard_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../routes/app_routes.dart';
+import 'package:get_storage/get_storage.dart';
 
 class LoginScreenController extends GetxController{
 
@@ -14,11 +15,13 @@ final formKey = GlobalKey<FormState>();
 RxBool secureText=true.obs;
 RxBool isAuthenticated = false.obs;
 
+final storage=GetStorage();
+
 
 
 @override
   void onInit() {
-  saveCredentials( "hammad@gmail.com","12345678");
+  saveCredentials( "synaptik","syn786");
     // TODO: implement onInit
     super.onInit();
   }
@@ -60,7 +63,9 @@ RxBool isAuthenticated = false.obs;
 
     if (enteredUsername == storedUsername && enteredPassword == storedPassword) {
       isAuthenticated.value = true;
+
       Get.offAndToNamed(Routes.dashboardScreen);
+
       Get.snackbar('Authentication Success', 'Login successfully',
           snackPosition: SnackPosition.TOP);
     } else {
